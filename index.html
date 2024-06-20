@@ -34,28 +34,38 @@
                 <p class="length">0</p>
             </div>
 
-            <input type="range" name="" id="" min="1" max="20">
+            <div class="slider-container">
+                <input type="range" name="" id="range" class="slider" min="1" max="20">
+            </div>
 
             <div class="checkboxes">
-                <label for="box1" class="box">
-                    <input type="checkbox" name="box1" id="" >
-                    Include Uppercase Letters
-                </label>
+                <div class="box">
+                    <input type="checkbox" name="box1" id="box1" >
+                    <label for="box1">
+                        Include Uppercase Letters
+                    </label>
+                </div>
 
-                <label for="box2" class="box">
-                    <input type="checkbox" name="box2" id="" >
-                    Include Lowercase Letters
-                </label>
+                <div class="box">
+                    <input type="checkbox" name="box2" id="box2" >
+                    <label for="box2">
+                        Include Lowercase Letters
+                    </label>
+                </div>
 
-                <label for="box3" class="box">
-                    <input type="checkbox" name="box3" id="" >
-                    Include Numbers
-                </label>
+                <div class="box">
+                    <input type="checkbox" name="box3" id="box3" >
+                    <label for="box3">
+                        Include Numbers
+                    </label>
+                </div>
 
-                <label for="box4" class="box">
-                    <input type="checkbox" name="box4" id="" >
-                    Include Symbols
-                </label>
+                <div class="box">
+                    <input type="checkbox" name="box4" id="box4" >
+                    <label for="box4">
+                        Include Symbols
+                    </label>
+                </div>
             </div>
 
             <div class="strength">
@@ -69,7 +79,7 @@
                 </div>
             </div>
 
-            <button>
+            <button class="generate-btn">
                 <p>Generate</p>
                 <i class="fa-solid fa-arrow-right"></i>
             </button>
