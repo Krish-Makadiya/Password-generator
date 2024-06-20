@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="heading">
+            Password Generator
+        </div>
+
+        <div class="password-display">
+            <input readonly>
+            <button>
+                <span></span>
+                <i class="fa-regular fa-copy"></i>
+            </button>
+        </div>
+
+        <div class="container">
+            <div class="char-length">
+                <p>Character Length</p>
+                <p class="length">0</p>
+            </div>
+
+            <input type="range" name="" id="" min="1" max="20">
+
+            <div class="checkboxes">
+                <label for="box1" class="box">
+                    <input type="checkbox" name="box1" id="" >
+                    Include Uppercase Letters
+                </label>
+
+                <label for="box2" class="box">
+                    <input type="checkbox" name="box2" id="" >
+                    Include Lowercase Letters
+                </label>
+
+                <label for="box3" class="box">
+                    <input type="checkbox" name="box3" id="" >
+                    Include Numbers
+                </label>
+
+                <label for="box4" class="box">
+                    <input type="checkbox" name="box4" id="" >
+                    Include Symbols
+                </label>
+            </div>
+
+            <div class="strength">
+                <p>STRENGTH</p>
+
+                <div class="indicator">
+                    <div class="curr-strength">EASY</div>
+                    <div class="val"></div>
+                    <div class="val"></div>
+                    <div class="val"></div>
+                </div>
+            </div>
+
+            <button>
+                <p>Generate</p>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
