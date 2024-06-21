@@ -21,7 +21,7 @@
         </div>
 
         <div class="password-display">
-            <input readonly>
+            <input class="display" readonly  placeholder="PASSWORD">
             <button>
                 <span></span>
                 <i class="fa-regular fa-copy"></i>
@@ -31,38 +31,38 @@
         <div class="container">
             <div class="char-length">
                 <p>Character Length</p>
-                <p class="length">0</p>
+                <p class="length">10</p>
             </div>
 
             <div class="slider-container">
-                <input type="range" name="" id="range" class="slider" min="1" max="20">
+                <input type="range" name="" id="range" class="slider" min="4" max="16" value="10">
             </div>
 
             <div class="checkboxes">
                 <div class="box">
-                    <input type="checkbox" name="box1" id="box1" >
-                    <label for="box1">
+                    <input type="checkbox" name="box1" id="uppercase" checked>
+                    <label for="uppercase">
                         Include Uppercase Letters
                     </label>
                 </div>
 
                 <div class="box">
-                    <input type="checkbox" name="box2" id="box2" >
-                    <label for="box2">
+                    <input type="checkbox" name="box2" id="lowercase" >
+                    <label for="lowercase">
                         Include Lowercase Letters
                     </label>
                 </div>
 
                 <div class="box">
-                    <input type="checkbox" name="box3" id="box3" >
-                    <label for="box3">
+                    <input type="checkbox" name="box3" id="numbers" >
+                    <label for="numbers">
                         Include Numbers
                     </label>
                 </div>
 
                 <div class="box">
-                    <input type="checkbox" name="box4" id="box4" >
-                    <label for="box4">
+                    <input type="checkbox" name="box4" id="symbols" >
+                    <label for="symbols">
                         Include Symbols
                     </label>
                 </div>
