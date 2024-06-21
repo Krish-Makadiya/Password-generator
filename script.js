@@ -108,6 +108,6 @@ function copyPassword(){
     copyBtn.classList.add('active');
     setTimeout(()=>{
         copyBtn.classList.remove('active');
-    }, 8000)
+    }, 2000)
 }
 
