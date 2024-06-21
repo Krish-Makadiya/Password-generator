@@ -91,10 +91,22 @@ generateButton.addEventListener("click", () => {
     isLowercaseChecked();
     isNumbersChecked();
     isSymbolsChecked();
-
     generateRamdonPassword();
-    displayPassword.value = password;
-    passwordStrengthIndicator();
+
+    if(characters == ""){
+        displayPassword.value = "";
+        currPasswordStrength.innerText = "";
+        strengthIndicator[0].style.backgroundColor = "#000";
+        strengthIndicator[0].style.border = "2px solid #fff";
+        strengthIndicator[1].style.backgroundColor = "#000";
+        strengthIndicator[1].style.border = "2px solid #fff";
+        strengthIndicator[2].style.backgroundColor = "#000";
+        strengthIndicator[2].style.border = "2px solid #fff";
+    }
+    else{
+        displayPassword.value = password;
+        passwordStrengthIndicator();
+    }
     password = "";
     characters = "";
     copyBtn.removeAttribute('disabled');
