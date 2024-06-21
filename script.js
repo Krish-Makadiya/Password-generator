@@ -8,6 +8,7 @@ const generateButton = document.querySelector(".generate-btn");
 const displayPassword = document.querySelector(".display");
 const currPasswordStrength = document.querySelector(".curr-strength");
 const strengthIndicator = document.querySelectorAll(".val");
+const copyBtn = document.querySelector(".copy-btn");
 
 var length = 10;
 var characters = "";
@@ -17,11 +18,11 @@ sliderVal.oninput = function () {
     setLength();
 };
 
-// sliderVal.addEventListener('input', (event)=>{
-//     const tempSliderValue = event.target.value; 
-//     const progress = (tempSliderValue)*6;
-//     sliderVal.style.background = `linear-gradient(to right, #f50 ${progress}%, #ccc ${progress}%)`;
-// })
+sliderVal.addEventListener("input", () => {
+    const tempSliderValue = sliderVal.value - 4;
+    const progress = (tempSliderValue / 12) * 100;
+    sliderVal.style.background = `linear-gradient(to right, #a5ffaf ${progress}%, #131217 ${progress}%)`;
+});
 
 function setLength() {
     length = sliderVal.value;
@@ -92,9 +93,21 @@ generateButton.addEventListener("click", () => {
     isSymbolsChecked();
 
     generateRamdonPassword();
-    displayPassword.placeholder = password;
+    displayPassword.value = password;
     passwordStrengthIndicator();
     password = "";
     characters = "";
-
+    copyBtn.removeAttribute('disabled');
 });
+
+function copyPassword(){
+    var copyText = document.querySelector('.display');
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value);
+    copyBtn.classList.add('active');
+    setTimeout(()=>{
+        copyBtn.classList.remove('active');
+    }, 8000)
+}
+

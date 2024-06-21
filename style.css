@@ -35,12 +35,8 @@
     width: 26vw;
     background-color: #24232a;
     border: none;
+    outline: none;
     padding: 6px 10px 6px 20px;
-    color: #a5ffaf;
-    font-size: 1.4rem;
-}
-
-.display::placeholder{
     color: #a5ffaf;
     font-size: 1.4rem;
 }
@@ -53,6 +49,42 @@
     font-size: 1.4rem;
     background-color: #24232a;
     border: none;
+}
+
+.copy-btn{
+    position: relative;
+}
+
+.copy-btn::before{
+    content: "copied";
+    position: absolute;
+    padding: 3px 8px;
+    font-size: 14px;
+    color: #131217;
+    background-color: #a5ffaf;
+    border-radius: 3px;
+    top: -40px;
+    z-index: 5;
+    display: none;
+    transition: 1s all ease-in-out;
+}
+
+.copy-btn::after{
+    content: "";
+    position: absolute;
+    top: -18px;
+    height: 8px;
+    width: 8px;
+    transform: rotate(45deg);
+    background-color: #a5ffaf;
+    z-index: 3;
+    display: none;
+    transition: 1s all ease-in-out;
+}
+
+.copy-btn.active::before,
+.copy-btn.active::after{
+    display: block;
 }
 
 .fa-copy {
@@ -89,7 +121,9 @@
     width: 100%;
     height: 6px;
     border-radius: 3px;
-    background-color: #e5e5e9;
+    background-color: #131217;
+    background: linear-gradient(to right, #a5ffaf 50%, #131217 50%);
+    cursor: pointer;
 }
 
 .slider::-webkit-slider-thumb{
@@ -186,6 +220,7 @@ input[type="checkbox"]:checked{
 .val {
     height: 30px;
     width: 10px;
+    border: 2px solid #e5e5e9;
 }
 
 .generate-btn {
@@ -224,6 +259,9 @@ input[type="checkbox"]:checked{
     .container {
         width: 45vw;
     }
+    .display::placeholder{
+        font-size: 1.4rem;
+    }
 }
 
 @media screen and (max-width: 840px) {
@@ -239,6 +277,9 @@ input[type="checkbox"]:checked{
     .container {
         width: 56vw;
     }
+    .display::placeholder{
+        font-size: 1.2rem;
+    }
 }
 
 @media screen and (max-width: 630px) {
@@ -249,10 +290,13 @@ input[type="checkbox"]:checked{
         width: 68vw;
     }
     .password-display input {
-        width: 68vw;
+        width: 55vw;
     }
     .container {
         width: 68vw;
+    }
+    .display::placeholder{
+        font-size: 1.2rem;
     }
 }
 
@@ -264,7 +308,7 @@ input[type="checkbox"]:checked{
         width: 90vw;
     }
     .password-display input {
-        width: 90vw;
+        width: 75vw;
     }
     .container {
         width: 90vw;

@@ -21,9 +21,8 @@
         </div>
 
         <div class="password-display">
-            <input class="display" readonly  placeholder="PASSWORD">
-            <button>
-                <span></span>
+            <input class="display" readonly  value="PASSWORD">
+            <button class="copy-btn" onclick="copyPassword()" disabled>
                 <i class="fa-regular fa-copy"></i>
             </button>
         </div>
@@ -72,7 +71,7 @@
                 <p>STRENGTH</p>
 
                 <div class="indicator">
-                    <div class="curr-strength">EASY</div>
+                    <div class="curr-strength"></div>
                     <div class="val"></div>
                     <div class="val"></div>
                     <div class="val"></div>
